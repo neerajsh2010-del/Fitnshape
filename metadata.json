@@ -1,0 +1,6 @@
+{
+  "name": "Fitnshape – Fitness, Health & Nutrition Magazine",
+  "description": "Move Better. Eat Better. Live Better. Fitnshape is your premier evidence-based publication for workouts, nutrition science, healthy recipes, yoga, and mindful wellness.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
