@@ -20,17 +20,14 @@ export default defineConfig({
     }
   },
 
-  server: {
-    // HMR is disabled in AI Studio via DISABLE_HMR.
-    hmr: process.env.DISABLE_HMR !== 'true',
-
-    // Disable file watching when HMR is disabled.
-    watch: process.env.DISABLE_HMR === 'true' ? null : {}
-  },
-
   build: {
     outDir: 'dist',
     emptyOutDir: true
+  },
+
+  server: {
+    hmr: process.env.DISABLE_HMR !== 'true',
+    watch: process.env.DISABLE_HMR === 'true' ? null : {}
   }
 });
 ```
