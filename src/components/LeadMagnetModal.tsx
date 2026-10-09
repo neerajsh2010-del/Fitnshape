@@ -153,7 +153,7 @@ https://fitnshape.in
                   required
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  placeholder="e.g. Alex Morgan"
+                  placeholder="Enter your name"
                   className="w-full px-4 py-2.5 rounded-lg border border-[#D5DFD8] bg-white text-[#1C1F1D] placeholder-[#8FA696] focus:outline-none focus:ring-2 focus:ring-[#132E22] text-sm"
                 />
               </div>

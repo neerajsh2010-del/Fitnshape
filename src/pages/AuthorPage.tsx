@@ -42,8 +42,8 @@ export const AuthorPage: React.FC<AuthorPageProps> = ({
           <Breadcrumbs
             items={[
               { label: 'Home', onClick: onNavigateHome },
-              { label: 'Editorial Team', onClick: onNavigateHome },
-              { label: author.name, active: true },
+              { label: 'Editorial Lead', onClick: onNavigateHome },
+              { label: `Author: ${author.name}`, active: true },
             ]}
             className="text-emerald-200/80 mb-6"
           />
@@ -63,18 +63,18 @@ export const AuthorPage: React.FC<AuthorPageProps> = ({
             <div className="space-y-3 flex-1">
               <div className="flex flex-wrap items-center gap-2.5">
                 <span className="text-xs font-bold uppercase tracking-wider text-[#E06B43] bg-white/10 px-3 py-1 rounded-full">
-                  Editorial Contributor
+                  Lead Author & Writer
                 </span>
                 {author.medicalReviewer && (
                   <span className="text-xs font-semibold text-emerald-300 bg-emerald-950/60 border border-emerald-800/80 px-2.5 py-1 rounded-full flex items-center gap-1">
                     <ShieldCheck className="w-3.5 h-3.5" />
-                    Clinical Review Board
+                    Verified Editorial Board
                   </span>
                 )}
               </div>
 
               <h1 className="font-editorial text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
-                {author.name}
+                Author: {author.name}
               </h1>
 
               <div className="text-sm font-semibold text-emerald-200 flex items-center gap-2">

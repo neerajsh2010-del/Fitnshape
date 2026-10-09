@@ -58,7 +58,7 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
     {
       id: 'c1',
       articleId: article.id,
-      authorName: 'Sarah Jenkins, MD',
+      authorName: 'Verified Reader',
       date: '2 days ago',
       content: 'Superb breakdown of the clinical literature. Especially appreciate highlighting the difference between acute lactate spikes and sustained aerobic mitochondrial biogenesis.',
       likes: 12,
@@ -66,7 +66,7 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
     {
       id: 'c2',
       articleId: article.id,
-      authorName: 'David K., Marathoner',
+      authorName: 'Fitnshape Member',
       date: 'Yesterday',
       content: 'Incorporated this protocol into my Sunday long runs and my recovery metrics have improved noticeably. The talk-test metric is dead-on accurate.',
       likes: 6,
@@ -213,9 +213,9 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
                   onClick={() => onNavigateAuthor && author && onNavigateAuthor(author.id)}
                   className="font-bold text-sm text-[#132E22] hover:text-[#E06B43] transition-colors cursor-pointer text-left block"
                 >
-                  {author?.name}
+                  Author: {author?.name || 'Admin'}
                 </button>
-                <div className="text-xs text-[#64746B]">{author?.role}</div>
+                <div className="text-xs text-[#64746B]">{author?.role || 'Lead Writer'}</div>
                 <div className="text-[11px] text-[#8FA696] flex items-center gap-1.5 mt-0.5">
                   <Calendar className="w-3 h-3" />
                   <span>Published {article.publishDate}</span>
@@ -642,7 +642,7 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
                     onClick={() => onNavigateAuthor && onNavigateAuthor(author.id)}
                     className="font-editorial text-lg font-bold text-[#132E22] hover:text-[#E06B43] transition-colors cursor-pointer text-left"
                   >
-                    About {author.name}
+                    About Author: {author.name}
                   </button>
                   <span className="text-xs text-[#4A6B56] font-semibold">{author.articleCount} Published Articles</span>
                 </div>
@@ -682,7 +682,7 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
                 <input
                   type="text"
                   required
-                  placeholder="Your Name (e.g. Jordan Smith)"
+                  placeholder="Your Name"
                   value={newCommentName}
                   onChange={(e) => setNewCommentName(e.target.value)}
                   className="px-3 py-2 rounded-lg border border-[#D5DFD8] text-xs text-[#1C1F1D] focus:ring-1 focus:ring-[#132E22] focus:outline-none"

@@ -50,7 +50,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
           </div>
 
           <div className="text-[11px] text-[#64746B] flex items-center gap-2 mt-1">
-            <span>{author?.name.split(',')[0]}</span>
+            <span>Author: {author?.name || 'Admin'}</span>
             <span aria-hidden="true" className="text-[#A3B8AC]">·</span>
             <span>{article.publishDate}</span>
           </div>
@@ -133,7 +133,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
                   className="w-6 h-6 rounded-full object-cover border border-[#D5DFD8]"
                 />
               )}
-              <span className="font-medium text-[#132E22]">{author?.name}</span>
+              <span className="font-medium text-[#132E22]">Author: {author?.name || 'Admin'}</span>
             </div>
 
             <span className="text-[11px]">{article.publishDate}</span>
@@ -209,7 +209,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
                 />
               )}
               <div>
-                <div className="text-xs font-bold text-[#132E22]">{author?.name}</div>
+                <div className="text-xs font-bold text-[#132E22]">Author: {author?.name || 'Admin'}</div>
                 <div className="text-[11px] text-[#64746B]">{article.publishDate}</div>
               </div>
             </div>
@@ -278,7 +278,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
         </div>
 
         <div className="flex items-center justify-between pt-3 border-t border-[#E8EFE9] text-xs text-[#64746B]">
-          <span className="truncate max-w-[140px] text-[#132E22] font-medium">{author?.name.split(',')[0]}</span>
+          <span className="truncate max-w-[140px] text-[#132E22] font-medium">Author: {author?.name || 'Admin'}</span>
           <span className="text-[11px]">{article.publishDate}</span>
         </div>
       </div>

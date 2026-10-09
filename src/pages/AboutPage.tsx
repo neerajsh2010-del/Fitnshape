@@ -107,18 +107,18 @@ export const AboutPage: React.FC<AboutPageProps> = ({
         <section className="space-y-6">
           <div>
             <h2 className="font-editorial text-2xl sm:text-3xl font-bold text-[#132E22]">
-              Meet the Editorial & Advisory Team
+              Meet the Author & Editorial Lead
             </h2>
             <p className="text-xs sm:text-sm text-[#4A6B56] mt-1">
-              Qualified practitioners committed to clear, actionable science communication.
+              Evidence-based fitness guidance and science-backed nutrition communication.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {AUTHORS.map((author) => (
               <div
                 key={author.id}
-                className="bg-white p-6 rounded-2xl border border-[#D5DFD8] flex gap-4 items-start shadow-2xs"
+                className="bg-white p-6 rounded-2xl border border-[#D5DFD8] flex gap-4 items-start shadow-2xs col-span-2"
               >
                 <img
                   src={author.avatar}
@@ -126,8 +126,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({
                   className="w-16 h-16 rounded-full object-cover border-2 border-[#D5DFD8] shrink-0"
                 />
                 <div className="space-y-1">
-                  <h3 className="font-editorial text-base font-bold text-[#132E22]">
-                    {author.name}
+                  <h3 className="font-editorial text-lg font-bold text-[#132E22]">
+                    Author: {author.name}
                   </h3>
                   <div className="text-xs text-[#E06B43] font-semibold">{author.credentials}</div>
                   <div className="text-[11px] text-[#64746B] font-medium">{author.role}</div>

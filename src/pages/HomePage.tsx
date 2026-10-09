@@ -722,7 +722,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                       required
                       value={inlineName}
                       onChange={(e) => setInlineName(e.target.value)}
-                      placeholder="e.g. Jordan"
+                      placeholder="Enter your name"
                       className="w-full px-3.5 py-2.5 rounded-lg border border-[#DDD5C7] text-sm text-[#1C1F1D] focus:ring-2 focus:ring-[#3F5441] focus:outline-none"
                     />
                   </div>
@@ -736,7 +736,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                       required
                       value={inlineEmail}
                       onChange={(e) => setInlineEmail(e.target.value)}
-                      placeholder="jordan@example.com"
+                      placeholder="your.email@example.com"
                       className="w-full px-3.5 py-2.5 rounded-lg border border-[#DDD5C7] text-sm text-[#1C1F1D] focus:ring-2 focus:ring-[#3F5441] focus:outline-none"
                     />
                   </div>
@@ -789,76 +789,6 @@ export const HomePage: React.FC<HomePageProps> = ({
                 </div>
               )}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================================
-          SECTION 10: ABOUT FITNSHAPE & VERIFIED EDITORS
-         ========================================================= */}
-      <section className="py-16 bg-white border-t border-[#E8E2D8]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-6 space-y-4">
-            <div className="flex items-center gap-3">
-              <FitnshapeLogo size="sm" variant="mark" />
-              <span className="text-xs font-bold uppercase tracking-wider text-[#D95B32]">
-                About Our Publication
-              </span>
-            </div>
-
-            <h2 className="font-editorial text-3xl sm:text-4xl font-bold text-[#1C1F1D] leading-tight">
-              Evidence Over Hype. <br />
-              Longevity Over Quick Fixes.
-            </h2>
-
-            <p className="text-sm text-[#5A685D] leading-relaxed">
-              At Fitnshape, we believe human health is not about extreme punishment or robotic perfection. It is about building physical capability, eating nourishing meals with pleasure, and nurturing metabolic longevity.
-            </p>
-
-            <p className="text-xs text-[#64746B] leading-relaxed">
-              Every training split, recipe, and mobility protocol published on our platform is authored or reviewed by licensed dietitians (RD), exercise physiologists (CSCS), and doctors of physical therapy (DPT).
-            </p>
-
-            <div className="pt-2 flex items-center gap-4">
-              <button
-                onClick={() => onNavigateView('about')}
-                className="py-2.5 px-5 rounded-lg bg-[#3F5441] hover:bg-[#2F3F31] text-white text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
-              >
-                Read Editorial Standards
-              </button>
-
-              <button
-                onClick={() => onNavigateView('contact')}
-                className="text-xs font-bold text-[#5A685D] hover:text-[#1C1F1D] transition-colors"
-              >
-                Contact Editorial Team →
-              </button>
-            </div>
-          </div>
-
-          <div className="lg:col-span-6 grid grid-cols-2 gap-4">
-            {AUTHORS.slice(0, 4).map((author) => (
-              <button
-                key={author.id}
-                type="button"
-                onClick={() => onNavigateAuthor && onNavigateAuthor(author.id)}
-                className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E8E2D8] hover:border-[#3F5441]/50 hover:bg-[#EBF1EC] transition-all space-y-2 text-center cursor-pointer group shadow-2xs"
-              >
-                <img
-                  src={author.avatar}
-                  alt={author.name}
-                  className="w-14 h-14 rounded-full object-cover mx-auto border-2 border-[#DDD5C7] group-hover:scale-105 transition-transform"
-                />
-                <div>
-                  <h4 className="font-editorial text-sm font-bold text-[#1C1F1D] group-hover:text-[#D95B32] transition-colors">
-                    {author.name}
-                  </h4>
-                  <div className="text-[10px] text-[#D95B32] font-semibold">{author.credentials}</div>
-                  <div className="text-[10px] text-[#64746B]">{author.role.split('&')[0]}</div>
-                  <span className="text-[10px] text-[#3F5441] font-semibold mt-1 inline-block">View Profile →</span>
-                </div>
-              </button>
-            ))}
           </div>
         </div>
       </section>
